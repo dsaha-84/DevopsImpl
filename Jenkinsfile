@@ -27,6 +27,7 @@ pipeline {
 		    script{
                 	echo 'Get Environment Details'
                 	//def deploymentType = //method call
+			echo "Call getCodeDeployGroupName method call"
 		 	def cdGroupName = getCodedeployGroupName('Dev','InPlace', 'EnvironmentConfig.json')
 	         	sleep 10
 		    }
