@@ -5,6 +5,9 @@ pipeline {
         text(name: 'BuildID', defaultValue: '', description: 'Build ID')
     }
     stages {
+	    stage('init'){
+	    	load log = '/vars/log.groovy'
+	    }
         stage('STAGE Download artifacts from S3') {
             steps {
                 echo 'Downloading Artifacts from Artifactory Server'
@@ -20,7 +23,7 @@ pipeline {
     	stage('STAGE Get Environment Details') {
             steps {
                 echo 'Get Environment Details'
-                def deploymentType = //method call
+                //def deploymentType = //method call
 	         sleep 10
             }
         }
@@ -28,12 +31,14 @@ pipeline {
             steps {
                 echo 'Deploy to STAGE'
                 sleep 10
-                if(params.DeploymentType == 'InPlace'){
-                    //CALL ::: Inplace-AppDeployment.jdp
-                }
-                else if(params.DeploymentType == 'BlueGreen'){
-                    //CALL ::: BlueGreen-AppDeployment.jdp
-                }
+		script{
+			if(params.DeploymentType == 'InPlace'){
+			    //CALL ::: Inplace-AppDeployment.jdp
+			}
+			else if(params.DeploymentType == 'BlueGreen'){
+			    //CALL ::: BlueGreen-AppDeployment.jdp
+			}
+		}
             }
         }
 	    
@@ -75,12 +80,14 @@ pipeline {
             steps {
                 echo 'Deploy to PRODUCTION'
                 sleep 10
-                if(params.DeploymentType == 'InPlace'){
-                    //CALL ::: Inplace-AppDeployment.jdp
-                }
-                else if(params.DeploymentType == 'BlueGreen'){
-                    //CALL ::: BlueGreen-AppDeployment.jdp
-                }
+                script{
+			if(params.DeploymentType == 'InPlace'){
+			    //CALL ::: Inplace-AppDeployment.jdp
+			}
+			else if(params.DeploymentType == 'BlueGreen'){
+			    //CALL ::: BlueGreen-AppDeployment.jdp
+			}
+		}
             }
         }	    
         ////////////////////////////// DEPLOY PROD ENV END////////////////////////////////////////////
