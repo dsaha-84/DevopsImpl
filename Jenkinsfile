@@ -22,10 +22,12 @@ pipeline {
         }
     	stage('STAGE Get Environment Details') {
             steps {
-                echo 'Get Environment Details'
-                //def deploymentType = //method call
-		 def cdGroupName = getCodedeployGroupName('Dev','InPlace', 'EnvironmentConfig.json')
-	         sleep 10
+		    script{
+                	echo 'Get Environment Details'
+                	//def deploymentType = //method call
+		 	def cdGroupName = getCodedeployGroupName('Dev','InPlace', 'EnvironmentConfig.json')
+	         	sleep 10
+		    }
             }
         }
 	    stage('Deploy to STAGE') {
