@@ -108,9 +108,10 @@ def getCodedeployGroupName(env, type, jsonFile){
 	def jsonstr = JsonOutput.prettyPrint(json) 
 	Map jsonContent = (Map)new JsonSlurper().parseText(jsonstr)
 	//echo "JSONCONTENT::  ${jsonContent}"
-	def envobj = jsonContent.get('dev').get('Deployment').get('InPlace')
+	def envobj = jsonContent.get('dev').get('Deployment')//.get('InPlace')
 	echo "envobj :::::: ${envobj}"
-	def deployType = envobj.getJSONObject(0)
+	JSONArray array = envobj.getJSONArray('InPlace');
+	def deployType = array.getJSONObject(0)
 	def groupName = deployType.get("DeploymentGroupName")
 	echo "GROUPNAME :::::: ${groupName}"
 	
