@@ -52,6 +52,7 @@ pipeline {
             input {
                 message "Deployment of {Applicationname} (Build #14) to PRODUCTION environment is complete. Please validate deployment and approve to proceed with clean up of resources?"
                 ok "Approve"
+
                 submitter "DevOps Team"
                 parameters {
                     string(name: 'APPROVER', defaultValue: 'Mr Sridhar', description: 'We are going to deploy build no: ?')
@@ -59,6 +60,7 @@ pipeline {
                 }
             steps {
                 echo 'CI Release Environment'
+
               //Wait for approval response
             }
         }
