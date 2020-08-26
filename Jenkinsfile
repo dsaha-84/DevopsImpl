@@ -30,7 +30,7 @@ pipeline {
             steps {
                 echo 'deploy Messaging.css.mcafee.com'
                 sleep 10
-                if("${params.DeploymentType}" eq "InPlace"){
+                if(params.DeploymentType == 'InPlace'){
                     //CALL ::: Inplace-AppDeployment.jdp
                 }
                 else{
