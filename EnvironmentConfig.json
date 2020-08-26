@@ -7,8 +7,8 @@
         },
         "topicArn": "",
         "Deployment":{
-            "InPlace":[{
-                "ApplicationName": "NGM-Development-Messaging",
+            "InPlace":{"NGM-Development-Messaging":{
+				"ApplicationName": "NGM-Development-Messaging",
                 "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
                 "s3BucketName": "",
                 "ARN":"",
@@ -17,8 +17,8 @@
                 "AutoScalingGroupName": "",
                 "AutoScalingARN": ""
             },
-            {
-                "ApplicationName": "NGM-Development-Cohart",
+            "NGM-Development-Cohart":{
+				"ApplicationName": "NGM-Development-Cohart",
                 "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
                 "s3BucketName": "",
                 "ARN":"",
@@ -27,8 +27,17 @@
                 "AutoScalingGroupName": "",
                 "AutoScalingARN": ""
             },
-            {
+            "NGM-Development-Policyorchestration":{
                 "ApplicationName": "NGM-Development-Policyorchestration",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName": "",
+                "TargetGroupARN": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": ""
+            },
+            "NGM-Development-EventStore":{
+				"ApplicationName": "NGM-Development-EventStore",
                 "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
                 "s3BucketName": "",
                 "ARN":"",
@@ -37,8 +46,8 @@
                 "AutoScalingGroupName": "",
                 "AutoScalingARN": ""
             },
-            {
-                "ApplicationName": "NGM-Development-EventStore",
+            "NGM-Development-Console":{
+				"ApplicationName": "NGM-Development-Console",
                 "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
                 "s3BucketName": "",
                 "ARN":"",
@@ -47,17 +56,7 @@
                 "AutoScalingGroupName": "",
                 "AutoScalingARN": ""
             },
-            {
-                "ApplicationName": "NGM-Development-Console",
-                "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
-                "s3BucketName": "",
-                "ARN":"",
-                "TargetGroupName": "",
-                "TargetGroupARN": "",
-                "AutoScalingGroupName": "",
-                "AutoScalingARN": ""
-            },
-            {
+            "NGM-Development-Enrollment":{
                 "ApplicationName": "NGM-Development-Enrollment",
                 "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
                 "s3BucketName": "",
@@ -66,7 +65,7 @@
                 "TargetGroupARN": "",
                 "AutoScalingGroupName": "",
                 "AutoScalingARN": ""
-            }]
+            }}
         }
     },
     "qa":{
