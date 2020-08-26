@@ -13,13 +13,13 @@ pipeline {
     	stage('STAGE Download artifacts from S3') {
             steps {
                 echo 'Downloading Artifacts from Artifactory Server'
-                sleep 10
+                //sleep 10
             }
         }
 	    stage('STAGE Get Env Params from aws ParamStore') {
             steps {
                 echo 'Get Env Params from aws ParamStore'
-                sleep 10
+                //sleep 10
             }
         }
     	stage('STAGE Get Environment Details') {
@@ -104,7 +104,7 @@ def getCodedeployGroupName(env, type, jsonFile){
 
 	def fileContent = readJSON file: "${jsonFile}"
 	echo "JSONCONTENT::  ${fileContent}"
-	//Map jsonContent = (Map) new JsonSlurper().parseText(fileContent)
+	def jsonContent = new JsonSlurper().parseText(fileContent)
 	echo "JSONCONTENT::  ${jsonContent}"
 	//def envobj = jsonContent.get("${env}")
 	//def deployType = jsonContent.get("${type}")
