@@ -28,7 +28,7 @@ pipeline {
                 	echo 'Get Environment Details'
                 	//def deploymentType = //method call
 			echo "Call getCodeDeployGroupName method call"
-		 	def cdGroupName = getCodedeployGroupName('Dev','InPlace', 'EnvironmentConfig.json')
+		 	def cdGroupName = getCodedeployGroupName('dev','InPlace', 'EnvironmentConfig.json')
 	         	sleep 10
 		    }
             }
@@ -103,13 +103,15 @@ pipeline {
 def getCodedeployGroupName(env, type, jsonFile){
 
 	def fileContent = readJSON file: "${jsonFile}"
-	echo "JSONCONTENT::  ${fileContent}"
+	//echo "JSONCONTENT::  ${fileContent}"
 	def json = JsonOutput.toJson(fileContent)    
 	println JsonOutput.prettyPrint(json) 
 	Map jsonContent = (Map)new JsonSlurper().parseText(json)
-	echo "JSONCONTENT::  ${jsonContent}"
+	//echo "JSONCONTENT::  ${jsonContent}"
 	def envobj = jsonContent.get("${env}")
+	echo "envobj :::::: ${envobj}"
 	def deployType = jsonContent.get("${type}")
+	echo "deployType :::::: ${deployType}"
 	def groupName = jsonContent.get("DeploymentGroupName")
 	echo "GROUPNAME :::::: ${groupName}"
 	return groupName
