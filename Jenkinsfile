@@ -9,7 +9,7 @@ pipeline {
 		steps{
 		    script {
 			logCode = load 'vars/log.groovy'
-			logCode.info('Init Release pipeline')
+			logCode.info 'Init Release pipeline'
 		    }
 		}
     	}
