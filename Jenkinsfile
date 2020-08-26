@@ -6,10 +6,12 @@ pipeline {
     }
     stages {
     	stage('init'){
-	    script {
-		logCode = load '/vars/log.groovy' 
-		logCode.info('Init Release pipeline')
-	    }
+		steps{
+		    script {
+			logCode = load '/vars/log.groovy' 
+			logCode.info('Init Release pipeline')
+		    }
+		}
     	}
         stage('STAGE Download artifacts from S3') {
             steps {
