@@ -76,7 +76,8 @@
         },
         "topicArn": "",
         "Deployment":{
-            "InPlace":[{
+            "InPlace":
+		"NGM-Development-Messaging":{
                 "ApplicationName": "NGM-Development-Messaging",
                 "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
                 "s3BucketName": "",
@@ -86,7 +87,7 @@
                 "AutoScalingGroupName": "",
                 "AutoScalingARN": ""
             },
-            {
+            "NGM-Development-Cohart":{
                 "ApplicationName": "NGM-Development-Cohart",
                 "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
                 "s3BucketName": "",
@@ -96,7 +97,7 @@
                 "AutoScalingGroupName": "",
                 "AutoScalingARN": ""
             },
-            {
+            "NGM-Development-Policyorchestration":{
                 "ApplicationName": "NGM-Development-Policyorchestration",
                 "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
                 "s3BucketName": "",
@@ -106,7 +107,7 @@
                 "AutoScalingGroupName": "",
                 "AutoScalingARN": ""
             },
-            {
+            "NGM-Development-EventStore":{
                 "ApplicationName": "NGM-Development-EventStore",
                 "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
                 "s3BucketName": "",
@@ -116,7 +117,7 @@
                 "AutoScalingGroupName": "",
                 "AutoScalingARN": ""
             },
-            {
+            "NGM-Development-Console":{
                 "ApplicationName": "NGM-Development-Console",
                 "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
                 "s3BucketName": "",
@@ -126,7 +127,7 @@
                 "AutoScalingGroupName": "",
                 "AutoScalingARN": ""
             },
-            {
+            "NGM-Development-Console":{
                 "ApplicationName": "NGM-Development-Enrollment",
                 "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
                 "s3BucketName": "",
@@ -135,8 +136,7 @@
                 "TargetGroupARN": "",
                 "AutoScalingGroupName": "",
                 "AutoScalingARN": ""
-            }
-            ]
+            }            
         }
     },
     "stage":{
