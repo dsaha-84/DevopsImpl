@@ -1,4 +1,4 @@
-@Library('my-shared-library@release/ngm') _
+@Library('my-shared-library@release') _
 
 
 pipeline {
