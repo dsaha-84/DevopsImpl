@@ -30,12 +30,14 @@ pipeline {
             steps {
                 echo 'deploy Messaging.css.mcafee.com'
                 sleep 10
-                if(params.DeploymentType == 'InPlace'){
-                    //CALL ::: Inplace-AppDeployment.jdp
-                }
-                else{
-                    //CALL ::: BlueGreen-AppDeployment.jdp
-                }
+		script{
+			if(params.DeploymentType == 'InPlace'){
+			    //CALL ::: Inplace-AppDeployment.jdp
+			}
+			else{
+			    //CALL ::: BlueGreen-AppDeployment.jdp
+			}
+		}
             }
         }
         stage('Validate deployment') {
@@ -73,12 +75,14 @@ pipeline {
         stage('Deployment to QA') {
             steps {
                 echo 'CI Release Environment'
-                if(params.DeploymentType == 'InPlace'){
-                    //CALL ::: Inplace-AppDeployment.jdp
-                }
-                else{
-                    //CALL ::: BlueGreen-AppDeployment.jdp
-                }
+                script{
+			if(params.DeploymentType == 'InPlace'){
+			    //CALL ::: Inplace-AppDeployment.jdp
+			}
+			else{
+			    //CALL ::: BlueGreen-AppDeployment.jdp
+			}
+		}
             }
         }
         ///////////////////////////QA DEPLOY END////////////////////////////////
