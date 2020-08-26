@@ -1,4 +1,4 @@
-@Library('my-shared-library@$BRANCH_NAME') _
+@Library('my-shared-library') _
 
 
 pipeline {
@@ -11,7 +11,7 @@ pipeline {
     	stage('init'){
 		steps{
 		    script {
-			logCode = load 'vars/log.groovy'
+			logCode = load 'log.groovy'
 			logCode.info 'Init Release pipeline'
 		    }
 		}
