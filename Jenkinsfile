@@ -21,6 +21,7 @@ pipeline {
             steps {
                 echo 'Get Environment Details'
                 //def deploymentType = //method call
+		 def cdGroupName = getCodedeployGroupName('Dev','InPlace', 'EnvironmentConfig.json')
 	         sleep 10
             }
         }
@@ -89,4 +90,15 @@ pipeline {
         }	    
         ////////////////////////////// DEPLOY PROD ENV END////////////////////////////////////////////
     }
+}
+
+def getCodedeployGroupName(env, type, jsonFile){
+
+	def fileContent = readJSON file: "${jsonFile}"
+	Map jsonContent = (Map) new JsonSlurper().parseText(fileContent)
+	def envobj = jsonContent.get("${env}")
+	def deployType = jsonContent.get("${type}")
+	def groupName = jsonContent.get("DeploymentGroupName")
+
+	return groupName
 }
