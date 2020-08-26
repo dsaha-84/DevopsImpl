@@ -7,7 +7,7 @@
         },
         "topicArn": "",
         "Deployment":{
-            "InPlace":[{
+            "InPlace":{
                 "ApplicationName": "NGM-Development-Messaging",
                 "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
                 "s3BucketName": "",
@@ -67,8 +67,8 @@
                 "AutoScalingGroupName": "",
                 "AutoScalingARN": ""
             }
-            ],
-            "BlueGreen":[{
+            ,
+            "BlueGreen":{
                 "ApplicationName": "NGM-Development-Messaging",
                 "DeploymentGroupName": "NGM-Development-BlueGreenDeploymentGroup",
                 "s3BucketName": "",
@@ -151,7 +151,7 @@
                 "AutoScalingARN": "",
                 "AutoScaleMin": "",
                 "AutoScaleMax": ""
-            }]
+            }
         }
     },
     "qa":{
