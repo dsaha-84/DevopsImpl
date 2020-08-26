@@ -8,7 +8,7 @@ pipeline {
     	stage('init'){
 		steps{
 		    script {
-			logCode = load 'log.groovy' 
+			logCode = load '.\vars\log.groovy' 
 			logCode.info('Init Release pipeline')
 		    }
 		}
