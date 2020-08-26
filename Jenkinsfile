@@ -5,9 +5,6 @@ pipeline {
         text(name: 'BuildID', defaultValue: '', description: 'Build ID')
     }
     stages {
-	    stage('init'){
-	    	load log = '/vars/log.groovy'
-	    }
         stage('STAGE Download artifacts from S3') {
             steps {
                 echo 'Downloading Artifacts from Artifactory Server'
@@ -72,7 +69,7 @@ pipeline {
     	stage('Get Environment Details') {
             steps {
                 echo 'Get Environment Details'
-                def deploymentType = //method call
+                //def deploymentType = //method call
 	         sleep 10
             }
         }
