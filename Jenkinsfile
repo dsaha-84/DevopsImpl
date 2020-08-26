@@ -1,3 +1,5 @@
+@Library('utils') _
+
 pipeline {
     agent any
     parameters {
@@ -8,7 +10,7 @@ pipeline {
     	stage('init'){
 		steps{
 		    script {
-			logCode = load "${workspace}@script\\vars\\log.groovy"
+			logCode = load 'vars/log.groovy'
 			logCode.info('Init Release pipeline')
 		    }
 		}
