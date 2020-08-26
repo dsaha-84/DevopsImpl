@@ -101,6 +101,7 @@ def getCodedeployGroupName(env, type, jsonFile){
 
 	def fileContent = readJSON file: "${jsonFile}"
 	Map jsonContent = (Map) new JsonSlurper().parseText(fileContent)
+	echo "JSONCONTENT::  ${jsonContent}"
 	def envobj = jsonContent.get("${env}")
 	def deployType = jsonContent.get("${type}")
 	def groupName = jsonContent.get("DeploymentGroupName")
