@@ -1,0 +1,71 @@
+pipeline {
+  	agent any
+  	parameters {
+        text(name: 'BranchName', defaultValue: '', description: 'Branch Name')
+        text(name: 'BuildID', defaultValue: '', description: 'Build ID')
+    }
+  	stages {
+		stage('Blue Env: Deployment') {
+			steps {
+				echo 'Code Deployment'
+				// Call :::: Blue-App-Deployment.jdp
+			}
+		}
+		stage('Send Notification to Teams channel') {
+            steps {
+                echo 'Send Notification to Teams channel'
+				//Message Deployment of {#Applicationname} (Build #14) to {#EnvironmentName} environment is complete
+                sleep 10
+            }
+        }
+		stage('Validate deployment') {
+            input {
+                message "Deployment of {#Applicationname} (Build #14) to {#EnvironmentName} environment is complete. Please validate deployment and approve to proceed with clean up of resources?"
+                ok "Approve"
+                submitter "DevOps Team"
+                parameters {
+                    string(name: 'APPROVER', defaultValue: 'Mr Sridhar', description: 'We are going to deploy build no: ?')
+                }
+                }
+            steps {
+                echo 'CI Release Environment'
+              //Wait for approver response
+            }
+        }
+
+		stage('Swap Blue to Green Env: Update Host file') {
+			steps {
+				echo 'Green Env: Update Host file'
+				// Call ::: Green-App-Deployment.jdp
+			}
+		}
+
+        stage('Send Notification to Teams channel') {
+            steps {
+                echo 'Notifiy to user: Blue env is idle and ready to terminate...'
+                sleep 10
+            }
+        }
+		stage('Terminate Idle Blue Environment') {
+            input {
+                message "Terminate Idle Blue Environment?"
+                ok "Approve"
+                submitter "DevOps Team"
+                parameters {
+                    string(name: 'APPROVER', defaultValue: 'Mr Sridhar', description: 'We are going to deploy build no: ?')
+                }
+                }
+            steps {
+                echo 'Terminate Idle Blue Environment'
+              	//CALL ::: Delete-Blue-App-Deployments.jdp
+            }
+        }
+
+        stage('Send Notification to Teams channel') {
+            steps {
+                echo 'Send Notification to Teams channel'
+                sleep 10
+            }
+        }
+    }
+}

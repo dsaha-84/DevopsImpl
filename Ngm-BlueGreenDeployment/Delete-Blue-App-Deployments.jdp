@@ -1,0 +1,51 @@
+agentLabel = "Dev"
+String s3BucketName = ""
+String awsRegion = "us-east-1" 
+
+pipeline {
+    agent { label agentLabel }
+	stages {
+		stage('Get Environment Details') {
+            steps {
+                echo 'Get Environment Details'
+	         sleep 10
+            }
+        }
+		stage('Blue Env: Terminate Blue Environment Instances') {
+			parallel{
+				stage('Blue Env: Terminate Instances : Messaging.css.mcafee.com') {
+					steps {
+						echo 'Blue Env: Terminate Instances'
+					}
+				}
+				stage('Blue Env: Terminate Instances : Cohort.css.mcafee.com') {
+					steps {
+						echo 'Blue Env: Terminate Blue Instances'
+					}
+				}
+				stage('Blue Env: Terminate Instances : Eventstore.css.mcafee.com') {
+					steps {
+						echo 'Blue Env: Terminate Instances'
+					}
+				}
+				stage('Blue Env: Terminate Instances : Policyorchestration.css.mcafee.com') {
+					steps {
+						echo 'Blue Env: Terminate Instances'
+					}
+				}
+				stage('Blue Env: Terminate Instances : Enrollment.css.mcafee.com') {
+					steps {
+						echo 'Blue Env: Terminate Blue Instances'
+					}
+				}
+				stage('Blue Env: Terminate Instances : Ngmconsole.css.mcafee.com') {
+					steps {
+						echo 'Blue Env: Terminate Instances'
+					}
+				}
+			}
+		}
+	}
+}
+
+

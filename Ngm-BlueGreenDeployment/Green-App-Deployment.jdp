@@ -1,0 +1,105 @@
+agentLabel = "Dev"
+String s3BucketName = ""
+String awsRegion = "us-east-1" //  should be input parameters.
+
+pipeline {
+    agent { label agentLabel }
+	stages {
+		stage('Get Environment Details') {
+            steps {
+                echo 'Get Environment Details'
+	         sleep 10
+            }
+        }
+		stage('Swap Blue to Green Env: Update Host file') {
+			parallel{
+				stage('Green Env: Update Host file : Messaging.css.mcafee.com') {
+					stages {
+						stage('Blue Env: Update Host file') {
+							steps {
+								echo 'Blue Env: Update Host file'
+							}
+						}
+						stage("Reroute Traffic from Blue to Green"){
+							steps{
+								echo 'eroute Traffic from Blue to Green'	
+							}
+						}
+					}
+				}
+				stage('Green Env: Update Host file : Cohort.css.mcafee.com') {
+					stages {
+						stage('Blue Env: Update Host file') {
+							steps {
+								echo 'Blue Env: Update Host file'
+							}
+						}
+						stage("Reroute Traffic from Blue to Green"){
+							steps{
+								echo 'eroute Traffic from Blue to Green'	
+							}
+						}
+					}
+				}
+				stage('Green Env: Update Host file : Eventstore.css.mcafee.com') {
+					stages {
+						stage('Blue Env: Update Host file') {
+							steps {
+								echo 'Blue Env: Update Host file'
+							}
+						}
+						stage("Reroute Traffic from Blue to Green"){
+							steps{
+								echo 'eroute Traffic from Blue to Green'	
+							}
+						}
+					}
+				}
+				stage('Green Env: Update Host file : Policyorchestration.css.mcafee.com') {
+					stages {
+						stage('Blue Env: Update Host file') {
+							steps {
+								echo 'Blue Env: Update Host file'
+							}
+						}
+						stage("Reroute Traffic from Blue to Green"){
+							steps{
+								echo 'eroute Traffic from Blue to Green'	
+							}
+						}
+					}
+				}
+				stage('Green Env: Update Host file : Enrollment.css.mcafee.com') {
+					stages {
+						stage('Blue Env: Update Host file') {
+							steps {
+								echo 'Blue Env: Update Host file'
+							}
+						}
+						stage("Reroute Traffic from Blue to Green"){
+							steps{
+								echo 'eroute Traffic from Blue to Green'	
+							}
+						}
+					}
+				}
+				stage('Green Env: Update Host file : Ngmconsole.css.mcafee.com') {
+					stages {
+						stage('Blue Env: Update Host file') {
+							steps {
+								echo 'Blue Env: Update Host file'
+							}
+						}
+						stage("Reroute Traffic from Blue to Green"){
+							steps{
+								echo 'eroute Traffic from Blue to Green'	
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+

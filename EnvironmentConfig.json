@@ -1,0 +1,622 @@
+{
+    "dev":{
+        "ApplicationName": "NGM-APPDeplyment",
+        "ApprovalChannel":{
+            "Name":"",
+            "IncomingWebhookUrl": ""
+        },
+        "topicArn": "",
+        "Deployment":{
+            "InPlace":[{
+                "ApplicationName": "NGM-Development-Messaging",
+                "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName": "",
+                "TargetGroupARN": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Cohart",
+                "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName": "",
+                "TargetGroupARN": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Policyorchestration",
+                "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName": "",
+                "TargetGroupARN": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-EventStore",
+                "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName": "",
+                "TargetGroupARN": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Console",
+                "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName": "",
+                "TargetGroupARN": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Enrollment",
+                "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName": "",
+                "TargetGroupARN": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": ""
+            }
+            ],
+            "BlueGreen":[{
+                "ApplicationName": "NGM-Development-Messaging",
+                "DeploymentGroupName": "NGM-Development-BlueGreenDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName-Blue": "",
+                "TargetGroupARN-Blue": "",
+                "TargetGroupName-Green": "",
+                "TargetGroupARN-Green": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": "",
+                "AutoScaleMin": "",
+                "AutoScaleMax": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Cohart",
+                "DeploymentGroupName": "NGM-Development-BlueGreenDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName-Blue": "",
+                "TargetGroupARN-Blue": "",
+                "TargetGroupName-Green": "",
+                "TargetGroupARN-Green": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": "",
+                "AutoScaleMin": "",
+                "AutoScaleMax": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Cosole",
+                "DeploymentGroupName": "NGM-Development-BlueGreenDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName-Blue": "",
+                "TargetGroupARN-Blue": "",
+                "TargetGroupName-Green": "",
+                "TargetGroupARN-Green": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": "",
+                "AutoScaleMin": "",
+                "AutoScaleMax": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-EventStore",
+                "DeploymentGroupName": "NGM-Development-BlueGreenDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName-Blue": "",
+                "TargetGroupARN-Blue": "",
+                "TargetGroupName-Green": "",
+                "TargetGroupARN-Green": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": "",
+                "AutoScaleMin": "",
+                "AutoScaleMax": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Policyorchestration",
+                "DeploymentGroupName": "NGM-Development-BlueGreenDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName-Blue": "",
+                "TargetGroupARN-Blue": "",
+                "TargetGroupName-Green": "",
+                "TargetGroupARN-Green": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": "",
+                "AutoScaleMin": "",
+                "AutoScaleMax": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Entrollment",
+                "DeploymentGroupName": "NGM-Development-BlueGreenDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName-Blue": "",
+                "TargetGroupARN-Blue": "",
+                "TargetGroupName-Green": "",
+                "TargetGroupARN-Green": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": "",
+                "AutoScaleMin": "",
+                "AutoScaleMax": ""
+            }]
+        }
+    },
+    "qa":{
+        "ApplicationName": "NGM-APPDeplyment",
+        "ApprovalChannel":{
+            "Name":"",
+            "IncomingWebhookUrl": ""
+        },
+        "topicArn": "",
+        "Deployment":{
+            "InPlace":[{
+                "ApplicationName": "NGM-Development-Messaging",
+                "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName": "",
+                "TargetGroupARN": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Cohart",
+                "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName": "",
+                "TargetGroupARN": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Policyorchestration",
+                "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName": "",
+                "TargetGroupARN": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-EventStore",
+                "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName": "",
+                "TargetGroupARN": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Console",
+                "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName": "",
+                "TargetGroupARN": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Enrollment",
+                "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName": "",
+                "TargetGroupARN": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": ""
+            }
+            ],
+            "BlueGreen":[{
+                "ApplicationName": "NGM-Development-Messaging",
+                "DeploymentGroupName": "NGM-Development-BlueGreenDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName-Blue": "",
+                "TargetGroupARN-Blue": "",
+                "TargetGroupName-Green": "",
+                "TargetGroupARN-Green": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": "",
+                "AutoScaleMin": "",
+                "AutoScaleMax": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Cohart",
+                "DeploymentGroupName": "NGM-Development-BlueGreenDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName-Blue": "",
+                "TargetGroupARN-Blue": "",
+                "TargetGroupName-Green": "",
+                "TargetGroupARN-Green": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": "",
+                "AutoScaleMin": "",
+                "AutoScaleMax": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Cosole",
+                "DeploymentGroupName": "NGM-Development-BlueGreenDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName-Blue": "",
+                "TargetGroupARN-Blue": "",
+                "TargetGroupName-Green": "",
+                "TargetGroupARN-Green": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": "",
+                "AutoScaleMin": "",
+                "AutoScaleMax": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-EventStore",
+                "DeploymentGroupName": "NGM-Development-BlueGreenDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName-Blue": "",
+                "TargetGroupARN-Blue": "",
+                "TargetGroupName-Green": "",
+                "TargetGroupARN-Green": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": "",
+                "AutoScaleMin": "",
+                "AutoScaleMax": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Policyorchestration",
+                "DeploymentGroupName": "NGM-Development-BlueGreenDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName-Blue": "",
+                "TargetGroupARN-Blue": "",
+                "TargetGroupName-Green": "",
+                "TargetGroupARN-Green": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": "",
+                "AutoScaleMin": "",
+                "AutoScaleMax": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Entrollment",
+                "DeploymentGroupName": "NGM-Development-BlueGreenDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName-Blue": "",
+                "TargetGroupARN-Blue": "",
+                "TargetGroupName-Green": "",
+                "TargetGroupARN-Green": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": "",
+                "AutoScaleMin": "",
+                "AutoScaleMax": ""
+            }]
+        }
+    },
+    "stage":{
+        "ApplicationName": "NGM-APPDeplyment",
+        "ApprovalChannel":{
+            "Name":"",
+            "IncomingWebhookUrl": ""
+        },
+        "topicArn": "",
+        "Deployment":{
+            "InPlace":[{
+                "ApplicationName": "NGM-Development-Messaging",
+                "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName": "",
+                "TargetGroupARN": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Cohart",
+                "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName": "",
+                "TargetGroupARN": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Policyorchestration",
+                "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName": "",
+                "TargetGroupARN": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-EventStore",
+                "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName": "",
+                "TargetGroupARN": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Console",
+                "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName": "",
+                "TargetGroupARN": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Enrollment",
+                "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName": "",
+                "TargetGroupARN": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": ""
+            }
+            ],
+            "BlueGreen":[{
+                "ApplicationName": "NGM-Development-Messaging",
+                "DeploymentGroupName": "NGM-Development-BlueGreenDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName-Blue": "",
+                "TargetGroupARN-Blue": "",
+                "TargetGroupName-Green": "",
+                "TargetGroupARN-Green": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": "",
+                "AutoScaleMin": "",
+                "AutoScaleMax": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Cohart",
+                "DeploymentGroupName": "NGM-Development-BlueGreenDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName-Blue": "",
+                "TargetGroupARN-Blue": "",
+                "TargetGroupName-Green": "",
+                "TargetGroupARN-Green": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": "",
+                "AutoScaleMin": "",
+                "AutoScaleMax": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Cosole",
+                "DeploymentGroupName": "NGM-Development-BlueGreenDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName-Blue": "",
+                "TargetGroupARN-Blue": "",
+                "TargetGroupName-Green": "",
+                "TargetGroupARN-Green": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": "",
+                "AutoScaleMin": "",
+                "AutoScaleMax": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-EventStore",
+                "DeploymentGroupName": "NGM-Development-BlueGreenDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName-Blue": "",
+                "TargetGroupARN-Blue": "",
+                "TargetGroupName-Green": "",
+                "TargetGroupARN-Green": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": "",
+                "AutoScaleMin": "",
+                "AutoScaleMax": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Policyorchestration",
+                "DeploymentGroupName": "NGM-Development-BlueGreenDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName-Blue": "",
+                "TargetGroupARN-Blue": "",
+                "TargetGroupName-Green": "",
+                "TargetGroupARN-Green": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": "",
+                "AutoScaleMin": "",
+                "AutoScaleMax": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Entrollment",
+                "DeploymentGroupName": "NGM-Development-BlueGreenDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName-Blue": "",
+                "TargetGroupARN-Blue": "",
+                "TargetGroupName-Green": "",
+                "TargetGroupARN-Green": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": "",
+                "AutoScaleMin": "",
+                "AutoScaleMax": ""
+            }]
+        }
+    },
+    "prod":{
+        "ApplicationName": "NGM-APPDeplyment",
+        "ApprovalChannel":{
+            "Name":"",
+            "IncomingWebhookUrl": ""
+        },
+        "topicArn": "",
+        "Deployment":{
+            "InPlace":[{
+                "ApplicationName": "NGM-Development-Messaging",
+                "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName": "",
+                "TargetGroupARN": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Cohart",
+                "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName": "",
+                "TargetGroupARN": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Policyorchestration",
+                "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName": "",
+                "TargetGroupARN": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-EventStore",
+                "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName": "",
+                "TargetGroupARN": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Console",
+                "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName": "",
+                "TargetGroupARN": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Enrollment",
+                "DeploymentGroupName": "NGM-Development-InPlaceDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName": "",
+                "TargetGroupARN": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": ""
+            }
+            ],
+            "BlueGreen":[{
+                "ApplicationName": "NGM-Development-Messaging",
+                "DeploymentGroupName": "NGM-Development-BlueGreenDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName-Blue": "",
+                "TargetGroupARN-Blue": "",
+                "TargetGroupName-Green": "",
+                "TargetGroupARN-Green": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": "",
+                "AutoScaleMin": "",
+                "AutoScaleMax": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Cohart",
+                "DeploymentGroupName": "NGM-Development-BlueGreenDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName-Blue": "",
+                "TargetGroupARN-Blue": "",
+                "TargetGroupName-Green": "",
+                "TargetGroupARN-Green": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": "",
+                "AutoScaleMin": "",
+                "AutoScaleMax": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Cosole",
+                "DeploymentGroupName": "NGM-Development-BlueGreenDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName-Blue": "",
+                "TargetGroupARN-Blue": "",
+                "TargetGroupName-Green": "",
+                "TargetGroupARN-Green": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": "",
+                "AutoScaleMin": "",
+                "AutoScaleMax": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-EventStore",
+                "DeploymentGroupName": "NGM-Development-BlueGreenDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName-Blue": "",
+                "TargetGroupARN-Blue": "",
+                "TargetGroupName-Green": "",
+                "TargetGroupARN-Green": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": "",
+                "AutoScaleMin": "",
+                "AutoScaleMax": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Policyorchestration",
+                "DeploymentGroupName": "NGM-Development-BlueGreenDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName-Blue": "",
+                "TargetGroupARN-Blue": "",
+                "TargetGroupName-Green": "",
+                "TargetGroupARN-Green": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": "",
+                "AutoScaleMin": "",
+                "AutoScaleMax": ""
+            },
+            {
+                "ApplicationName": "NGM-Development-Entrollment",
+                "DeploymentGroupName": "NGM-Development-BlueGreenDeploymentGroup",
+                "s3BucketName": "",
+                "ARN":"",
+                "TargetGroupName-Blue": "",
+                "TargetGroupARN-Blue": "",
+                "TargetGroupName-Green": "",
+                "TargetGroupARN-Green": "",
+                "AutoScalingGroupName": "",
+                "AutoScalingARN": "",
+                "AutoScaleMin": "",
+                "AutoScaleMax": ""
+            }]
+        }
+    }
+}

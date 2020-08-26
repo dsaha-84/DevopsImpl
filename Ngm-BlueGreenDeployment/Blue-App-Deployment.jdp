@@ -1,0 +1,146 @@
+agentLabel = "Dev"
+String s3BucketName = ""
+String awsRegion = "us-east-1" //  should be input parameters.
+
+pipeline {
+    agent { label agentLabel }
+	stages {
+		stage('Get Environment Details') {
+            steps {
+                echo 'Get Environment Details'
+	         sleep 10
+            }
+        }
+		stage('Blue Env: Deployment') {
+			parallel{
+				stage('deploy Messaging.css.mcafee.com') {
+					stages {
+						stage("Deployment"){
+							echo 'deploy Messaging.css.mcafee.com'
+							build job:'Messaging.css.mcafee.com' ,
+							parameters:[
+							string(name: 'BranchName',value: env.BranchName),
+							string(name: 'BuildID',value: env.BuildID),
+							string(name: 'EnvType',value: env.EnvName),
+							string(name: 'DeployType',value: env.DeployType)
+							]
+							sleep 10
+						}
+						stage('Blue Env: Update Host file') {
+							steps {
+								echo 'Blue Env: Update Host file'
+							}
+						}
+					}
+				}
+				stage('deploy Cohort.css.mcafee.com') {
+					stages {
+						stage("Deployment"){
+							echo 'deploy Messaging.css.mcafee.com'
+							build job:'Messaging.css.mcafee.com' ,
+							parameters:[
+							string(name: 'BranchName',value: env.BranchName),
+							string(name: 'BuildID',value: env.BuildID),
+							string(name: 'EnvType',value: env.EnvName),
+							string(name: 'DeployType',value: env.DeployType)
+							]
+							sleep 10
+						}
+						stage('Blue Env: Update Host file') {
+							steps {
+								echo 'Blue Env: Update Host file'
+							}
+						}
+					}
+				}
+				stage('deploy Eventstore.css.mcafee.com') {
+					stages {
+						stage("Deployment"){
+							echo 'deploy Messaging.css.mcafee.com'
+							build job:'Messaging.css.mcafee.com' ,
+							parameters:[
+							string(name: 'BranchName',value: env.BranchName),
+							string(name: 'BuildID',value: env.BuildID),
+							string(name: 'EnvType',value: env.EnvName),
+							string(name: 'DeployType',value: env.DeployType)
+							]
+							sleep 10
+						}
+						stage('Blue Env: Update Host file') {
+							steps {
+								echo 'Blue Env: Update Host file'
+							}
+						}
+					}
+				}
+				stage('deploy Policyorchestration.css.mcafee.com') {
+					stages {
+						stage("Deployment"){
+							echo 'deploy Messaging.css.mcafee.com'
+							build job:'Messaging.css.mcafee.com' ,
+							parameters:[
+							string(name: 'BranchName',value: env.BranchName),
+							string(name: 'BuildID',value: env.BuildID),
+							string(name: 'EnvType',value: env.EnvName),
+							string(name: 'DeployType',value: env.DeployType)
+							]
+							sleep 10
+						}
+						stage('Blue Env: Update Host file') {
+							steps {
+								echo 'Blue Env: Update Host file'
+							}
+						}
+					}
+				}
+				stage('deploy Enrollment.css.mcafee.com') {
+					stages {
+						stage("Deployment"){
+							echo 'deploy Messaging.css.mcafee.com'
+							build job:'Messaging.css.mcafee.com' ,
+							parameters:[
+							string(name: 'BranchName',value: env.BranchName),
+							string(name: 'BuildID',value: env.BuildID),
+							string(name: 'EnvType',value: env.EnvName),
+							string(name: 'DeployType',value: env.DeployType)
+							]
+							sleep 10
+						}
+						stage('Blue Env: Update Host file') {
+							steps {
+								echo 'Blue Env: Update Host file'
+							}
+						}
+					}
+				}
+				stage('deploy Ngmconsole.css.mcafee.com') {
+					stages {
+						stage("Deployment"){
+							echo 'deploy Ngmconsole.css.mcafee.com'
+							build job:'Ngmconsole.css.mcafee.com' ,
+							parameters:[
+							string(name: 'BranchName',value: env.BranchName),
+							string(name: 'BuildID',value: env.BuildID),
+							string(name: 'EnvType',value: env.EnvName),
+							string(name: 'DeployType',value: env.DeployType)
+							]
+							sleep 10
+						}
+						stage('Blue Env: Update Host file') {
+							steps {
+								echo 'Blue Env: Update Host file'
+							}
+						}
+					}
+				}
+			}
+		}
+		stage('Database : Deployment') {
+				steps {
+					echo 'Database Deployment'
+				}
+		}
+	}
+}
+
+

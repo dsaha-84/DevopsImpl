@@ -1,0 +1,117 @@
+agentLabel = "Dev"
+String s3BucketName = ""
+String awsRegion = "us-east-1"
+def logCode
+
+pipeline {
+    agent { label agentLabel }
+	stages {
+		stage('Get Environment Details') {
+            steps {
+                echo 'Get Environment Details'
+				logCode = load 'log.groovy'
+				logCode.info('Get Environment Details')
+	         sleep 10
+            }
+        }
+		stage('Inplace: Deployment') {
+			parallel{
+				stage('deploy Messaging.css.mcafee.com') {
+					stages {
+						stage('deploy Messaging.css.mcafee.com') {
+							steps {
+								//echo 'deploy Messaging.css.mcafee.com'
+								logCode.info('deploy Messaging.css.mcafee.com')
+								build job:'Messaging.css.mcafee.com' ,
+								parameters:[
+								string(name: 'BranchName',value: env.BranchName),
+								string(name: 'BuildID',value: env.BuildID),
+								string(name: 'EnvType',value: env.EnvName),
+								string(name: 'DeployType',value: env.DeployType)
+								]
+								sleep 10
+							}
+						}
+						stage('deploy Eventstore.css.mcafee.com') {
+							steps {
+								echo 'deploy Eventstore.css.mcafee.com'
+								build job:'Eventstore.css.mcafee.com' ,
+								parameters:[
+								string(name: 'BranchName',value: env.BranchName),
+								string(name: 'BuildID',value: env.BuildID),
+							string(name: 'EnvType',value: env.EnvName),
+							string(name: 'DeployType',value: env.DeployType)
+								]
+								sleep 10
+							}
+						}
+						stage('deploy Policyorchestration.css.mcafee.com') {
+							steps {
+								echo 'deploy Policyorchestration.css.mcafee.com'
+								build job:'Policyorchestration.css.mcafee.com' ,
+								parameters:[
+								string(name: 'BranchName',value: env.BranchName),
+								string(name: 'BuildID',value: env.BuildID),
+							string(name: 'EnvType',value: env.EnvName),
+							string(name: 'DeployType',value: env.DeployType)
+								]
+								sleep 10
+							}
+						}
+						stage('deploy Enrollment.css.mcafee.com') {
+							steps {
+								echo 'deploy Enrollment.css.mcafee.com'
+								build job:'Enrollment.css.mcafee.com' ,
+								parameters:[
+								string(name: 'BranchName',value: env.BranchName),
+								string(name: 'BuildID',value: env.BuildID),
+							string(name: 'EnvType',value: env.EnvName),
+							string(name: 'DeployType',value: env.DeployType)
+								]
+								sleep 10
+							}
+						}
+						stage('deploy Ngmconsole.css.mcafee.com') {
+							steps {
+								echo 'deploy Ngmconsole.css.mcafee.com'
+								build job:'Ngmconsole.int.mcafee.com' ,
+								parameters:[
+								string(name: 'BranchName',value: env.BranchName),
+								string(name: 'BuildID',value: env.BuildID),
+							string(name: 'EnvType',value: env.EnvName),
+							string(name: 'DeployType',value: env.DeployType)
+								]
+								sleep 10
+							}
+						}
+						stage('deploy NGM DB') {
+							steps {
+								echo 'deploy Datascripts'
+								#build job:'Ngm.database.deployment' ,
+								parameters:[
+								string(name: 'BranchName',value: env.BranchName),
+								string(name: 'BuildID',value: env.BuildID),
+							string(name: 'EnvType',value: env.EnvName)
+								]
+								sleep 10
+							}
+						}
+					}
+				}
+			}
+		}
+      	stage('deploy NGM DB') {
+         	steps {
+             	echo 'deploy Datascripts'
+             	#build job:'Ngm.database.deployment' ,
+             	parameters:[
+             	string(name: 'BranchName',value: env.BranchName),
+             	string(name: 'BuildID',value: env.BuildID),
+              	string(name: 'EnvType',value: env.EnvName)
+             	]
+             	sleep 10
+         	}
+     	}
+	}
+}
+

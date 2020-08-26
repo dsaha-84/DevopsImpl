@@ -1,0 +1,22 @@
+pipeline {
+  	agent any
+  	parameters {
+        text(name: 'BranchName', defaultValue: '', description: 'Branch Name')
+        text(name: 'BuildID', defaultValue: '', description: 'Build ID')
+    }
+  	stages {
+     	stage('Inplace: App Deployment') {
+			steps {
+				echo 'Code Deployment'
+				// Call :::: Ngm-Inplace-App-Deployment.jdp
+			}
+		}
+		stage('Send Notification to Teams channel') {
+            steps {
+                echo 'Send Notification to Teams channel'
+				//Message Deployment of {#Applicationname} (Build #14) to {#EnvironmentName} environment is complete
+                sleep 10
+            }
+        }
+    }
+}
