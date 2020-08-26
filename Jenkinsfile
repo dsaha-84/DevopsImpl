@@ -5,6 +5,12 @@ pipeline {
         text(name: 'BuildID', defaultValue: '', description: 'Build ID')
     }
     stages {
+    	stage('init'){
+	    steps{
+		logCode = load '/vars/log.groovy' 
+		logCode.info('Init Release pipeline')
+	    }
+    	}
         stage('STAGE Download artifacts from S3') {
             steps {
                 echo 'Downloading Artifacts from Artifactory Server'
