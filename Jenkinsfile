@@ -112,8 +112,8 @@ def getCodedeployGroupName(env, type, jsonFile){
 	echo "envobj :::::: ${envobj}"
 	//def deployType = jsonContent.get("${type}")
 	//echo "deployType :::::: ${deployType}"
-	def groupName = jsonContent.get("DeploymentGroupName")
+	def groupName = envobj.get("DeploymentGroupName")
 	echo "GROUPNAME :::::: ${groupName}"
-	echo jsonContent.body
+	
 	return groupName
 }
