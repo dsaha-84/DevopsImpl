@@ -73,7 +73,7 @@ pipeline {
         stage('Deployment to QA') {
             steps {
                 echo 'CI Release Environment'
-                if("${params.DeploymentType}" eq "InPlace"){
+                if(params.DeploymentType == 'InPlace'){
                     //CALL ::: Inplace-AppDeployment.jdp
                 }
                 else{
