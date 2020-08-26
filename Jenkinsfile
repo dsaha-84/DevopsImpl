@@ -1,6 +1,3 @@
-@Library('utils') _
-
-
 pipeline {
     agent any
     parameters {
@@ -8,15 +5,7 @@ pipeline {
         text(name: 'BuildID', defaultValue: '', description: 'Build ID')
     }
     stages {
-    	stage('init'){
-		steps{
-		    script {
-			log.info 'Starting'
-			log.warning 'Nothing to do!'
-		    }
-		}
-    	}
-        stage('STAGE Download artifacts from S3') {
+    	stage('STAGE Download artifacts from S3') {
             steps {
                 echo 'Downloading Artifacts from Artifactory Server'
                 sleep 10
