@@ -1,4 +1,5 @@
-@Library('my-shared-library') _
+@Library('my-shared-library@$BRANCH_NAME') _
+
 
 pipeline {
     agent any
