@@ -11,8 +11,8 @@ pipeline {
     	stage('init'){
 		steps{
 		    script {
-			logCode = load 'log.groovy'
-			logCode.info 'Init Release pipeline'
+			log.info 'Starting'
+			log.warning 'Nothing to do!'
 		    }
 		}
     	}
