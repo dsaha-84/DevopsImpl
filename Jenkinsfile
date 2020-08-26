@@ -8,19 +8,19 @@ pipeline {
         choice(name: 'DeploymentType', choices: ['InPlace','BlueGreen'], description: 'Choose an Deployment Type')
     }
     stages {
-        stage('Get Environment Details') {
+        stage('DEV Get Environment Details') {
             steps {
                 echo 'Development Deployment'
                 sleep 10
             }
         }
-        stage('Download artifacts from S3') {
+        stage('DEV Download artifacts from S3') {
             steps {
                 echo 'Downloading Artifacts from Artifactory Server'
                 sleep 10
             }
         }
-        stage('Upload artifacts to S3') {
+        stage('DEV Upload artifacts to S3') {
             steps {
                 echo 'Uploading to S3'
                 sleep 10
@@ -40,7 +40,7 @@ pipeline {
 		}
             }
         }
-        stage('Validate deployment') {
+        stage('DEV Validate deployment') {
             input {
                 message "Deployment of {Applicationname} (Build #14) to DEVELOPMENT environment is complete. Please validate deployment and approve to proceed with clean up of resources? ?"
                 ok "Approve?"
